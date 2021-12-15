@@ -27,8 +27,8 @@ h2 {
 }
 
 .select-box .options-container {
-  background: #2f3640;
-  color: #f5f6fa;
+  background: #fff;
+  color: #999;
   max-height: 41px;
   width: 100%;
   opacity: 0;
@@ -40,27 +40,29 @@ h2 {
 }
 
 .selected {
-  background: #2f3640;
+  background: #fff;
   border-radius: 8px;
   margin-bottom: 8px;
-  color: #f0f9f3;
+  color: #000;
   position: relative;
 
   order: 0;
   border: 1px solid #333;
 }
+.selected:hover {border: 1px solid #000; box-shadow: 0px 0px 8px rgba(104, 194, 121, 0.5);}
 
 .selected::after {
-  content: "";
-  background: url("img/arrow-down.svg");
+  content: '\25BC';
+  /* background: #5c6664; */
   background-size: contain;
   background-repeat: no-repeat;
+  color: #999;
 
   position: absolute;
   height: 100%;
   width: 32px;
   right: 10px;
-  top: 5px;
+  /* top: 5px; */
 
   transition: all 0.4s;
 }
@@ -91,7 +93,7 @@ h2 {
 .selected {
   padding: 12px 24px;
   cursor: pointer;
-  border-bottom: 1px solid #333;
+  /* border-bottom: 1px solid #333; */
 }
 
 .select-box .option:hover {
