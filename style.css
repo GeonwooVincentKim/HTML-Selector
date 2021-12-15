@@ -18,18 +18,21 @@ h2 {
 }
 
 .select-box {
-  display: flex;
-  width: 400px;
+  display: grid;
+  align-items: center;
+  padding: 8px 16px;
+  /* height: 41px; */
+  width: 100%;
   flex-direction: column;
 }
 
 .select-box .options-container {
   background: #2f3640;
   color: #f5f6fa;
-  max-height: 0;
+  max-height: 41px;
   width: 100%;
   opacity: 0;
-  /* transition: all 0.4s; */
+  transition: all .3s;
   border-radius: 8px;
   overflow: hidden;
 
@@ -37,13 +40,13 @@ h2 {
 }
 
 .selected {
-  background: #2f3640;
+  background: #f0f9f3;
   border-radius: 8px;
   margin-bottom: 8px;
-  color: #f5f6fa;
+  color: #000;
   position: relative;
-
-  order: 0;
+  /* order: 0; */
+  border: 1px solid #333;
 }
 
 .selected::after {
@@ -58,7 +61,15 @@ h2 {
   right: 10px;
   top: 5px;
 
-  transition: all 0.4s;
+  /* transition: all 0.4s; */
+
+  /* content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  min-height: 1px;
+  background-color: #ebebeb; */
 }
 
 .select-box .options-container.active {
@@ -67,10 +78,10 @@ h2 {
   overflow-y: scroll;
 }
 
-/* .select-box .options-container.active + .selected::after { */
-  /* transform: rotateX(180deg); */
-  /* top: -6px; */
-/* } */
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
 /* 
 .select-box .options-container::-webkit-scrollbar {
   width: 8px;
@@ -87,10 +98,12 @@ h2 {
 .selected {
   padding: 12px 24px;
   cursor: pointer;
+  border-bottom: 1px solid #333;
 }
 
 .select-box .option:hover {
-  background: #414b57;
+  /* background: #414b57; */
+  background: #c1c2c3;
 }
 
 .select-box label {

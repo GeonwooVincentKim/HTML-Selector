@@ -5,6 +5,7 @@ const optionsList = document.querySelectorAll(".option");
 
 selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
+  optionsContainer.style.color = "#ffffff";
 });
 
 optionsList.forEach(o => {
