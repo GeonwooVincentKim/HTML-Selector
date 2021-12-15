@@ -43,10 +43,11 @@ h2 {
   background: #2f3640;
   border-radius: 8px;
   margin-bottom: 8px;
-  color: #f5f6fa;
+  color: #f0f9f3;
   position: relative;
 
   order: 0;
+  border: 1px solid #333;
 }
 
 .selected::after {
@@ -90,6 +91,7 @@ h2 {
 .selected {
   padding: 12px 24px;
   cursor: pointer;
+  border-bottom: 1px solid #333;
 }
 
 .select-box .option:hover {
