@@ -24,4 +24,5 @@ optionsList.forEach(o => {
 
 $(document).mouseup(function (e){
   optionsContainer.classList.remove("active");
+  selected.style.color = "#000";
 });

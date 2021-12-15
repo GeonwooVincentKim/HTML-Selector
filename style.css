@@ -1,78 +1,15 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
+* {margin: 0;box-sizing: border-box;}
+body {font-family: "Roboto", sans-serif;background: #f7f6ff;}
+h2 {margin: 16px;}
 
-body {
-  font-family: "Roboto", sans-serif;
-  background: #f7f6ff;
-}
+.container { margin-top: 100px; padding: 32px;}
+.select-box {display: grid;align-items: center;padding: 8px 16px;width: 100%;flex-direction: column;}
 
-h2 {
-  margin: 16px;
-}
-
-.container {
-  margin-top: 100px;
-  padding: 32px;
-}
-
-.select-box {
-  display: grid;
-  align-items: center;
-  padding: 8px 16px;
-
-  width: 100%;
-  flex-direction: column;
-}
-
-.select-box .options-container {
-  background: #fff;
-  color: #999;
-  max-height: 41px;
-  width: 100%;
-  opacity: 0;
-  transition: all .3s;
-  border-radius: 8px;
-  overflow: hidden;
-
-  order: 1;
-}
-
-.selected {
-  background: #fff;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  color: #000;
-  position: relative;
-
-  order: 0;
-  border: 1px solid #999;
-}
+.select-box .options-container { background: #fff; color: #999; max-height: 41px; width: 100%; opacity: 0; transition: all .3s; border-radius: 8px; overflow: hidden; order: 1; }
+.selected { background: #fff; border-radius: 8px; margin-bottom: 8px; color: #000; position: relative; order: 0; border: 1px solid #999; }
 .selected:hover {border: 1px solid #000; box-shadow: 0px 0px 8px rgba(104, 194, 121, 0.5);}
-
-.selected::after {
-  content: '\25BC';
-  /* background: #5c6664; */
-  background-size: contain;
-  background-repeat: no-repeat;
-  color: #999;
-
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  /* top: 5px; */
-
-  transition: all 0.4s;
-}
-
-.select-box .options-container.active {
-  max-height: 240px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
+.selected::after { content: '\25BC'; /* background: #5c6664; */ background-size: contain; background-repeat: no-repeat; color: #999; position: absolute; height: 100%; width: 32px; right: 10px; /* top: 5px; */ transition: all 0.4s; }
+.select-box .options-container.active { max-height: 240px; opacity: 1; overflow-y: scroll; }
 /* .select-box .options-container.active + .selected::after { */
   /* transform: rotateX(180deg); */
   /* top: -6px; */
@@ -89,21 +26,7 @@ h2 {
   border-radius: 0 8px 8px 0;
 } */
 
-.select-box .option,
-.selected {
-  padding: 12px 24px;
-  cursor: pointer;
-  /* border-bottom: 1px solid #333; */
-}
-
-.select-box .option:hover {
-  background: #414b57;
-}
-
-.select-box label {
-  cursor: pointer;
-}
-
-.select-box .option .radio {
-  display: none;
-}
+.select-box .option, .selected { padding: 12px 24px; cursor: pointer; /* border-bottom: 1px solid #333; */ }
+.select-box .option:hover {background: #414b57;}
+.select-box label {cursor: pointer;}
+.select-box .option .radio {display: none;}
