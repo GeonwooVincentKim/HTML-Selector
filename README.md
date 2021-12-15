@@ -1,3 +1,3 @@
-# Custom-Select-Box
+# HTML-Selector
 
-Here is a demo: https://godsont.github.io/Custom-Select-Box/
+Selector with HTML &amp; CSS &amp; JS
