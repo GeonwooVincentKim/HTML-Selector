@@ -30,3 +30,4 @@ h2 {margin: 16px;}
 .select-box .option:hover {background: #414b57;}
 .select-box label {cursor: pointer;}
 .select-box .option .radio {display: none;}
+.option-disabled {display: none;}
