@@ -16,14 +16,16 @@ selected.addEventListener("click", () => {
 
 optionsList.forEach(o => {
     var getOptionValue;
-    o.addEventListener("click", () => {
+    o.addEventListener("click", (e) => {
         selected.innerHTML = o.querySelector("label").innerHTML;
         if(!(selected.innerHTML.match("Select Video Category"))) {
             selected.style.color = "#000";
-        } 
-        o.style.background = "rgba(104, 194, 121, 0.5)";
-        o.style.borderBottom = "1px solid #ebebeb"
-        o.style.fontWeight = "bold";
+        }
+
+        const previousState = document.querySelector(".option.selected");
+        if(previousState) previousState.classList.remove("selected");
+        e.currentTarget.classList.add("selected");
+        
         optionsContainer.classList.remove("active");
     });
 });

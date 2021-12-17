@@ -28,6 +28,7 @@ h2 {margin: 16px;}
 
 .select-box .option, .selected { padding: 12px 24px; cursor: pointer; /* border-bottom: 1px solid #333; */ }
 .select-box .option:hover {background: #414b57;}
+.select-box .option.selected {background-color: #404b37;}
 .select-box label {cursor: pointer;}
 .select-box .option .radio {display: none;}
 .option-disabled {display: none;}
