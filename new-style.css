@@ -6,14 +6,18 @@ h2 {margin: 16px;}
 .new-select-box {display: grid; align-items: center; padding: 8px 16px; width: 108px; height: 41px; flex-direction: column;}
 
 .new-select-box .new-options-container {background: #fff; color: #999; max-height: 41px; width: 108px; opacity: 0; overflow: hidden;}
-.check-selected {padding-top: 6px; padding-bottom: 6px; padding-left: 12px; background: #fff; color: #707070; position: relative; order: 0; border: 1px solid #999; font-size: 11px; line-height: 16px;}
+.option, .check-selected {padding-top: 6px; padding-bottom: 6px; padding-left: 12px; background: #fff; color: #707070; position: relative; order: 0; border: 1px solid #999; font-size: 11px; line-height: 16px;}
 .check-selected::after {content: ''; background: url(/Project/Publishing/Selector_UI/Custom-Select-Box/img/icon_arrow_down_gray02.svg); background-size: contain; background-repeat: no-repeat; color: #999; margin-left: 9px; position: absolute; height: 18px; width: 18px; right: 10px; transition: all 0.4s;}
-.new-select-box .new-options-container.new-active {max-height: 240px; opacity: 1; overflow-y: scroll; background: #333;}
+.option.check-selected::after {display: none;}
+.new-select-box .new-options-container.new-active {z-index: 1; max-height: 240px; opacity: 1; overflow-y: scroll; background: #333;}
 
 .new-select-box .new-options-container::-webkit-scrollbar {display: none;}
-.new-select-box .option, .check-selected { cursor: pointer; /* border-bottom: 1px solid #333; */ }
-.new-select-box .option:hover {background: #414b57;}
+.new-select-box .option-label, .check-selected { cursor: pointer; /* border-bottom: 1px solid #333; */ }
+.new-select-box .option-label:hover {background: #414b57;}
 .new-select-box .option.check-selected {background-color: #404b37;}
+
+/* .new-select-box .option-label .check-selected, .new-select-box .option-label {background-color: #404b37;} */
+/* .new-select-box .option-label {background-color: white;} */
 .new-select-box label {cursor: pointer;}
 .new-select-box .option .radio {display: none;}
-.option-disabled {display: none;}
+.option-disable {display: none;}

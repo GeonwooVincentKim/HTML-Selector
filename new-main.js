@@ -19,7 +19,10 @@ new_optionsList.forEach(o => {
             check_selected.style.color = "#707070";
         }
 
+        console.log(document.querySelector(".option-label"));
         const previousState = document.querySelector(".option.check-selected");
+        console.log(previousState);
+        // const previousState = document.querySelector(".option-label .check-selected");
         if(previousState) previousState.classList.remove("check-selected");
         e.currentTarget.classList.add("check-selected");
         
