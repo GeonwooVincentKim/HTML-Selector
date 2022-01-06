@@ -20,12 +20,8 @@ new_optionsList.forEach(o => {
         }
 
         const previousState = document.querySelector(".option.check-selected");
-        if(previousState) {
-            previousState.classList.remove("check-selected");
-            // previousState.style.color = "#f2f2f2";
-        }
+        if(previousState) previousState.classList.remove("check-selected");
         e.currentTarget.classList.add("check-selected");
-        // e.currentTarget.style.color = "#707070";
 
         new_optionsContainer.classList.remove("new-active");
     });
