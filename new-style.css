@@ -1,0 +1,10 @@
+* {margin: 0; box-sizing: border-box;}
+body {font-family: "Roboto", sans-serif; background: #f7f6ff;}
+h2 {margin: 16px;}
+
+.container {margin-top: 100px; padding: 32px;}
+.new-select-box {display: grid; align-items: center; width: 108px; height: 41px; flex-direction: column;}
+
+.new-select-box .new-options-container {background: #fff; color: #999; max-height: 41px; width: 108px; opacity: 0; overflow: hidden;}
+.check-selected {background: #fff; color: #000; position: relative; order: 0; border: 1px solid #999;}
+.check-selected::after {content: ''; background: url(/Project/Publishing/Selector_UI/Custom-Select-Box/img/icon_arrow_down_gray02.svg); background-size: contain; background-repeat: no-repeat; color: #999; position: absolute; height: 18px; width: 18px; right: 10px; transition: all 0.4s;}
