@@ -16,7 +16,7 @@ new_optionsList.forEach(o => {
     o.addEventListener("click", (e) => {
         check_selected.innerHTML = o.querySelector("label").innerHTML;
         if(!(check_selected.innerHTML.match("Select Video Category"))) {
-            check_selected.style.color = "#c1c2c3";
+            check_selected.style.color = "#707070";
         }
 
         const previousState = document.querySelector(".option.check-selected");
@@ -32,7 +32,7 @@ $(document).mouseup(function (e){
     if(check_selected.innerHTML.match("Select Video Category")) {
         check_selected.style.color = "#999";
     } else {
-        check_selected.style.color = "#c1c2c3";
+        check_selected.style.color = "#707070";
     }
 });
 
