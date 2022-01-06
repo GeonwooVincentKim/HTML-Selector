@@ -12,7 +12,6 @@ check_selected.addEventListener("click", () => {
 });
 
 new_optionsList.forEach(o => {
-    var getOptionValue;
     o.addEventListener("click", (e) => {
         check_selected.innerHTML = o.querySelector("label").innerHTML;
         if(!(check_selected.innerHTML.match("Select Video Category"))) {
