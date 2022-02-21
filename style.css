@@ -12,6 +12,10 @@ h2 {margin: 16px;}
 .selected::after { content: ''; /* background: #5c6664; */background: url(/Project/Publishing/Selector_UI/Custom-Select-Box/img/icon_arrow_down_gray02.svg); background-size: contain; background-repeat: no-repeat; color: #999; position: absolute; height: 18px; width: 18px; right: 10px; /* top: 5px; */ transition: all 0.4s; }
 .option.selected::after {display: none;}
 .select-box .options-container.active { max-height: 240px; opacity: 1; overflow-y: scroll; background: #333333;}
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  /* top: 0px; */
+} 
 /* .select-box .options-container.active + .selected::after { */
   /* transform: rotateX(180deg); */
   /* top: -6px; */
